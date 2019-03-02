@@ -1,0 +1,6 @@
+E:\RSS\RSS\bin\Debug\RSS.exe.config
+E:\RSS\RSS\bin\Debug\RSS.exe
+E:\RSS\RSS\bin\Debug\RSS.pdb
+E:\RSS\RSS\obj\Debug\NewsPortal.ConsoleSeed.csproj.CoreCompileInputs.cache
+E:\RSS\RSS\obj\Debug\RSS.exe
+E:\RSS\RSS\obj\Debug\RSS.pdb

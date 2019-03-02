@@ -1,0 +1,14 @@
+E:\RSS\NewsPortal.Domain\bin\Debug\NewsPortal.Domain.dll.config
+E:\RSS\NewsPortal.Domain\bin\Debug\NewsPortal.Domain.dll
+E:\RSS\NewsPortal.Domain\bin\Debug\NewsPortal.Domain.pdb
+E:\RSS\NewsPortal.Domain\bin\Debug\EntityFramework.dll
+E:\RSS\NewsPortal.Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\RSS\NewsPortal.Domain\bin\Debug\EntityFramework.xml
+E:\RSS\NewsPortal.Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.csprojAssemblyReference.cache
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.csproj.CoreCompileInputs.cache
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.csproj.CopyComplete
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.dll
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.pdb
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.Migrations.InitialCreate.resources
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.csproj.GenerateResource.cache

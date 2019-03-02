@@ -1,0 +1,7 @@
+E:\RSS\RSS\bin\Debug\RSS.exe.config
+E:\RSS\RSS\bin\Debug\RSS.exe
+E:\RSS\RSS\bin\Debug\RSS.pdb
+E:\RSS\RSS\obj\Debug\RSS.csprojAssemblyReference.cache
+E:\RSS\RSS\obj\Debug\RSS.csproj.CoreCompileInputs.cache
+E:\RSS\RSS\obj\Debug\RSS.exe
+E:\RSS\RSS\obj\Debug\RSS.pdb
