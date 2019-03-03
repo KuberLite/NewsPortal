@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NewsPortal.FetcherFacade\NewsPortal.FetcherFacade.csproj">
+      <Project>{f9c96da5-8717-4b8f-9a5f-3e601ba8e540}</Project>
+      <Name>NewsPortal.FetcherFacade</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,10 @@
+E:\RSS\NewsPortal.FetcherFacade\bin\Debug\NewsPortal.FetcherFacade.dll
+E:\RSS\NewsPortal.FetcherFacade\bin\Debug\NewsPortal.FetcherFacade.pdb
+E:\RSS\NewsPortal.FetcherFacade\obj\Debug\NewsPortal.FetcherFacade.csprojAssemblyReference.cache
+E:\RSS\NewsPortal.FetcherFacade\obj\Debug\NewsPortal.FetcherFacade.csproj.CoreCompileInputs.cache
+E:\RSS\NewsPortal.FetcherFacade\obj\Debug\NewsPortal.FetcherFacade.dll
+E:\RSS\NewsPortal.FetcherFacade\obj\Debug\NewsPortal.FetcherFacade.pdb
+E:\RSS\NewsPortal.FetcherFacade\bin\Debug\Microsoft.SyndicationFeed.ReaderWriter.dll
+E:\RSS\NewsPortal.FetcherFacade\bin\Debug\System.ServiceModel.Syndication.dll
+E:\RSS\NewsPortal.FetcherFacade\bin\Debug\System.ServiceModel.Syndication.xml
+E:\RSS\NewsPortal.FetcherFacade\obj\Debug\NewsPortal.FetcherFacade.csproj.CopyComplete

@@ -4,3 +4,7 @@ E:\RSS\RSS\bin\Debug\RSS.pdb
 E:\RSS\RSS\obj\Debug\NewsPortal.ConsoleSeed.csproj.CoreCompileInputs.cache
 E:\RSS\RSS\obj\Debug\RSS.exe
 E:\RSS\RSS\obj\Debug\RSS.pdb
+E:\RSS\RSS\obj\Debug\NewsPortal.ConsoleSeed.csprojAssemblyReference.cache
+E:\RSS\RSS\bin\Debug\NewsPortal.FetcherFacade.dll
+E:\RSS\RSS\bin\Debug\NewsPortal.FetcherFacade.pdb
+E:\RSS\RSS\obj\Debug\NewsPortal.ConsoleSeed.csproj.CopyComplete
