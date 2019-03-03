@@ -64,9 +64,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Items.cs" />
-    <Compile Include="Read.cs" />
+    <Compile Include="Abstraction\IConcreteFetcher.cs" />
+    <Compile Include="Abstraction\IDataFetcher.cs" />
+    <Compile Include="ConcreteFetcher.cs" />
+    <Compile Include="Models\IModelFromXml.cs" />
+    <Compile Include="Abstraction\IXmlFetcher.cs" />
+    <Compile Include="Implementation\DataFetcher.cs" />
+    <Compile Include="Models\NewsFromXmlModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Implementation\XmlFetcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

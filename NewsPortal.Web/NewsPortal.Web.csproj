@@ -187,6 +187,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NewsPortal.Bootstrapper\NewsPortal.Bootstrapper.csproj">
+      <Project>{edf3986a-f56c-487b-a98b-3a32aca52ea4}</Project>
+      <Name>NewsPortal.Bootstrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NewsPortal.Domain\NewsPortal.Domain.csproj">
       <Project>{a7c74459-e363-4cfe-a2ad-299b066db375}</Project>
       <Name>NewsPortal.Domain</Name>

@@ -4,14 +4,13 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace NewsPortal.Domain.Context
 {
-    class NewsContext : DbContext
+    public class NewsContext : DbContext
     {
-        public NewsContext() : base("NewsContext")
+        public NewsContext(string connectionString) : base(connectionString)
         {
-
         }
 
-        public DbSet<News> Newss { get; set; }
+        public DbSet<News> News { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

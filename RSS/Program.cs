@@ -1,6 +1,8 @@
 ﻿using NewsPortal.FetcherFacade;
+using NewsPortal.FetcherFacade.Models;
 using System;
 using System.Text;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace NewsPortal.ConsoleSeed
@@ -9,7 +11,11 @@ namespace NewsPortal.ConsoleSeed
     {
         static void Main(string[] args)
         {
-            Read.GetRequest("https://www.interfax.by/news/feed").Wait();
+            Task.Run(async () => await Handle()).Wait();
+        }
+
+        private static async Task Handle()
+        {
         }
     }
 }

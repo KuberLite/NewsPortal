@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NewsPortal.NewsFeedSources.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HabraHabrNewsFeedUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://habr.com/ru/rss/all/all/</Value>
+    </Setting>
+    <Setting Name="InterfaxNewsFeedUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.interfax.by/news/feed</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
