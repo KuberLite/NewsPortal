@@ -1,0 +1,10 @@
+E:\RSS\NewsPortal.NewsFeedSources\bin\Debug\NewsPortal.NewsFeedSources.dll.config
+E:\RSS\NewsPortal.NewsFeedSources\bin\Debug\NewsPortal.NewsFeedSources.dll
+E:\RSS\NewsPortal.NewsFeedSources\bin\Debug\NewsPortal.NewsFeedSources.pdb
+E:\RSS\NewsPortal.NewsFeedSources\bin\Debug\NewsPortal.FetcherFacade.dll
+E:\RSS\NewsPortal.NewsFeedSources\bin\Debug\NewsPortal.FetcherFacade.pdb
+E:\RSS\NewsPortal.NewsFeedSources\obj\Debug\NewsPortal.NewsFeedSources.csprojAssemblyReference.cache
+E:\RSS\NewsPortal.NewsFeedSources\obj\Debug\NewsPortal.NewsFeedSources.csproj.CoreCompileInputs.cache
+E:\RSS\NewsPortal.NewsFeedSources\obj\Debug\NewsPortal.NewsFeedSources.csproj.CopyComplete
+E:\RSS\NewsPortal.NewsFeedSources\obj\Debug\NewsPortal.NewsFeedSources.dll
+E:\RSS\NewsPortal.NewsFeedSources\obj\Debug\NewsPortal.NewsFeedSources.pdb

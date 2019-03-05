@@ -28,7 +28,6 @@ namespace NewsPortal.FetcherFacade
             }
             catch (Exception e)
             {
-                // TODO: add logging
                 throw e;
             }
         }

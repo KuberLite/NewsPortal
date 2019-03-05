@@ -1,6 +1,10 @@
-﻿using NewsPortal.Domain.Context;
+﻿using AutoMapper;
+using NewsPortal.DependencyInjection.Providers;
+using NewsPortal.Domain.Context;
 using NewsPortal.NewsFeedSources;
 using NewsPortal.NewsFeedSources.Interfaces;
+using NewsPortal.Services.Concrete;
+using NewsPortal.ServicesFacade.Concrete;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -18,8 +22,9 @@ namespace NewsPortal.DependencyInjection
             kernel = new StandardKernel();
             kernel.Unbind<ModelValidatorProvider>();
 
-            BindApplicationContext();
+            BindAutoMapper();
             BindNewsSources();
+            AddBindings();
         }
 
         public object GetService(Type serviceType)
@@ -32,10 +37,19 @@ namespace NewsPortal.DependencyInjection
             return kernel.GetAll(serviceType);
         }
 
-        private void BindApplicationContext()
+        private void AddBindings()
         {
-            var connectionString = ConfigurationManager.ConnectionStrings["NewsContext"];
-            kernel.Bind<NewsContext>().ToSelf().WithConstructorArgument(connectionString);
+            var connectionString = ConfigurationManager.ConnectionStrings["NewsContext"].ConnectionString;
+            kernel.Bind<NewsContext>().ToSelf()
+                .WithConstructorArgument("connectionString", connectionString);
+
+            kernel.Bind(typeof(INewsService)).To(typeof(NewsService));
+        }
+
+        private void BindAutoMapper()
+        {
+            kernel.Bind<IMapper>().ToProvider<AutoMapperProvider>()
+                .InSingletonScope();
         }
 
         private void BindNewsSources()

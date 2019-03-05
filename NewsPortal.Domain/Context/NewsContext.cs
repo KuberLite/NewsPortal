@@ -1,4 +1,4 @@
-﻿using NewsPortal.Domain.Models;
+﻿using NewsPortal.Domain.Entities;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
