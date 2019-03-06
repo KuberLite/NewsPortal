@@ -14,7 +14,7 @@ namespace NewsPortal.FetcherFacade
             dataFetcher = new DataFetcher<NewsFromXmlModel>();
         }
 
-        protected abstract string FetchUri { get; }
+        public abstract string FetchUri { get; }
 
         public async Task<List<NewsFromXmlModel>> GetNewsFeed()
         {

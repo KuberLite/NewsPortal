@@ -4,9 +4,11 @@ using NewsPortal.Domain.Entities;
 using NewsPortal.ServicesFacade.Base;
 using NewsPortal.ViewModel.Base;
 using NewsPortal.ViewModel.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace NewsPortal.Services.Base
@@ -78,11 +80,6 @@ namespace NewsPortal.Services.Base
                 Items = mapper.Map<IEnumerable<TViewModel>>(pageItems),
                 Count = await query.CountAsync()
             };
-        }
-
-        public async void GetNewNews(string guid, string title)
-        {
-            var a = await _context.News.Where(x => x.Guid == guid && x.Guid == title).ToListAsync();
         }
     }
 }

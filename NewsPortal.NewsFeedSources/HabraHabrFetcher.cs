@@ -6,7 +6,7 @@ namespace NewsPortal.NewsFeedSources
 {
     public class HabraHabrFetcher : ConcreteFetcher, IHabraHabrFetcher
     {
-        protected override string FetchUri
+        public override string FetchUri
         {
             get
             {

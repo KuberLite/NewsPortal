@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using NewsPortal.Bootstrapper;
 using NewsPortal.Domain.Context;
+using NewsPortal.Domain.Entities;
 using NewsPortal.FetcherFacade.Models;
 using NewsPortal.NewsFeedSources;
 using NewsPortal.NewsFeedSources.Interfaces;
@@ -8,6 +9,8 @@ using NewsPortal.ServicesFacade.Concrete;
 using NewsPortal.ViewModel.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -44,16 +47,18 @@ namespace NewsPortal.ConsoleSeed
         private static async Task ProcessMain()
         {
             var habrFeed = await habraHabrFetcher.GetNewsFeed();
-            await SeedNews(habrFeed).;
+            await SeedNews(habrFeed, habraHabrFetcher.FetchUri);
 
             var interfaxFeed = await interfaxFetcher.GetNewsFeed();
-            await SeedNews(interfaxFeed);
+            await SeedNews(interfaxFeed, interfaxFetcher.FetchUri);
         }
 
-        private static async Task SeedNews(List<NewsFromXmlModel> newsFeed)
+        private static async Task SeedNews(List<NewsFromXmlModel> newsFeed, string source)
         {
             var newsModels = mapper.Map<IEnumerable<NewsViewModel>>(newsFeed);
-            await newsService.AddRange(newsModels);
+            var savedNewsCount = await newsService.AddNewsFeed(newsModels);
+
+            Console.WriteLine($"Fetched {savedNewsCount} new records from source {source}");
         }
     }
 }

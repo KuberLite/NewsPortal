@@ -11,3 +11,4 @@ E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.csproj.CoreCompileInputs.ca
 E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.csproj.CopyComplete
 E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.dll
 E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.pdb
+E:\RSS\NewsPortal.Domain\obj\Debug\NewsPortal.Domain.csprojAssemblyReference.cache

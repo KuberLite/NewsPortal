@@ -1,7 +1,10 @@
 ﻿using NewsPortal.Domain.Entities;
 using NewsPortal.ViewModel.Base;
 using NewsPortal.ViewModel.Concrete;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace NewsPortal.ServicesFacade.Base
@@ -23,5 +26,7 @@ namespace NewsPortal.ServicesFacade.Base
         Task<IEnumerable<TViewModel>> GetAll();
 
         Task<PageViewModel<TViewModel>> GetPage(int pageNumber, int itemPerPage);
+
+        //TEntity AddIfNotExists(this DbSet<TEntity> dbSet, TEntity entity, Expression<Func<TEntity, bool>> predicate = null);
     }
 }

@@ -19,3 +19,6 @@ E:\RSS\NewsPortal.ServicesFacade\obj\Debug\NewsPortal.ServicesFacade.csproj.Core
 E:\RSS\NewsPortal.ServicesFacade\obj\Debug\NewsPortal.ServicesFacade.csproj.CopyComplete
 E:\RSS\NewsPortal.ServicesFacade\obj\Debug\NewsPortal.ServicesFacade.dll
 E:\RSS\NewsPortal.ServicesFacade\obj\Debug\NewsPortal.ServicesFacade.pdb
+E:\RSS\NewsPortal.ServicesFacade\bin\Debug\NewsPortal.ServicesFacade.dll.config
+E:\RSS\NewsPortal.ServicesFacade\bin\Debug\EntityFramework.SqlServer.dll
+E:\RSS\NewsPortal.ServicesFacade\bin\Debug\EntityFramework.SqlServer.xml

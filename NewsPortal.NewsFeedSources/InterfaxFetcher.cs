@@ -6,7 +6,7 @@ namespace NewsPortal.NewsFeedSources
 {
     public class InterfaxFetcher : ConcreteFetcher, IInterfaxFetcher
     {
-        protected override string FetchUri
+        public override string FetchUri
         {
             get
             {

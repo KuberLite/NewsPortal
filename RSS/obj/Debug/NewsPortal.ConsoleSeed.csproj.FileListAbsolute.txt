@@ -59,3 +59,4 @@ E:\RSS\RSS\obj\Debug\NewsPortal.ConsoleSeed.csproj.CoreCompileInputs.cache
 E:\RSS\RSS\obj\Debug\NewsPortal.ConsoleSeed.csproj.CopyComplete
 E:\RSS\RSS\obj\Debug\RSS.exe
 E:\RSS\RSS\obj\Debug\RSS.pdb
+E:\RSS\RSS\bin\Debug\NewsPortal.ServicesFacade.dll.config

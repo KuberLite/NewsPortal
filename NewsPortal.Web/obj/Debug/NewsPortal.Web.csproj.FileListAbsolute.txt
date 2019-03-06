@@ -113,3 +113,4 @@ E:\RSS\NewsPortal.Web\obj\Debug\NewsPortal.Web.csproj.CoreCompileInputs.cache
 E:\RSS\NewsPortal.Web\obj\Debug\NewsPortal.Web.csproj.CopyComplete
 E:\RSS\NewsPortal.Web\obj\Debug\NewsPortal.Web.dll
 E:\RSS\NewsPortal.Web\obj\Debug\NewsPortal.Web.pdb
+E:\RSS\NewsPortal.Web\bin\NewsPortal.ServicesFacade.dll.config

@@ -26,3 +26,4 @@ E:\RSS\NewsPortal.Services\obj\Debug\NewsPortal.Services.csproj.CoreCompileInput
 E:\RSS\NewsPortal.Services\obj\Debug\NewsPortal.Services.csproj.CopyComplete
 E:\RSS\NewsPortal.Services\obj\Debug\NewsPortal.Services.dll
 E:\RSS\NewsPortal.Services\obj\Debug\NewsPortal.Services.pdb
+E:\RSS\NewsPortal.Services\bin\Debug\NewsPortal.ServicesFacade.dll.config

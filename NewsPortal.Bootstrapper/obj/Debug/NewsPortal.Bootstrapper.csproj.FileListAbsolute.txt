@@ -54,3 +54,4 @@ E:\RSS\NewsPortal.Bootstrapper\obj\Debug\NewsPortal.Bootstrapper.csproj.CoreComp
 E:\RSS\NewsPortal.Bootstrapper\obj\Debug\NewsPortal.Bootstrapper.csproj.CopyComplete
 E:\RSS\NewsPortal.Bootstrapper\obj\Debug\NewsPortal.Bootstrapper.dll
 E:\RSS\NewsPortal.Bootstrapper\obj\Debug\NewsPortal.Bootstrapper.pdb
+E:\RSS\NewsPortal.Bootstrapper\bin\Debug\NewsPortal.ServicesFacade.dll.config

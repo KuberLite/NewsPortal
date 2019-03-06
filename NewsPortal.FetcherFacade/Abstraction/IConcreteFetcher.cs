@@ -6,6 +6,8 @@ namespace NewsPortal.FetcherFacade.Abstraction
 {
     public interface IConcreteFetcher
     {
+        string FetchUri { get; }
+
         Task<List<NewsFromXmlModel>> GetNewsFeed();
     }
 }
