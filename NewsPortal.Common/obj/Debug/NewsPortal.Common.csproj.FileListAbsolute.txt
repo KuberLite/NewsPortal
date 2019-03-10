@@ -1,0 +1,6 @@
+E:\RSS\NewsPortal.Common\bin\Debug\NewsPortal.Common.dll
+E:\RSS\NewsPortal.Common\bin\Debug\NewsPortal.Common.pdb
+E:\RSS\NewsPortal.Common\obj\Debug\NewsPortal.Common.csprojAssemblyReference.cache
+E:\RSS\NewsPortal.Common\obj\Debug\NewsPortal.Common.csproj.CoreCompileInputs.cache
+E:\RSS\NewsPortal.Common\obj\Debug\NewsPortal.Common.dll
+E:\RSS\NewsPortal.Common\obj\Debug\NewsPortal.Common.pdb

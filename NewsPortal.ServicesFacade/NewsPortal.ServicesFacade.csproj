@@ -64,6 +64,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NewsPortal.Common\NewsPortal.Common.csproj">
+      <Project>{75966D9F-AB2C-40B5-9332-5350B5222E05}</Project>
+      <Name>NewsPortal.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NewsPortal.Domain\NewsPortal.Domain.csproj">
       <Project>{A7C74459-E363-4CFE-A2AD-299B066DB375}</Project>
       <Name>NewsPortal.Domain</Name>

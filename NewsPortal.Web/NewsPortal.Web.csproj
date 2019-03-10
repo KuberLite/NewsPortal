@@ -189,7 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -208,6 +207,10 @@
     <ProjectReference Include="..\NewsPortal.Bootstrapper\NewsPortal.Bootstrapper.csproj">
       <Project>{edf3986a-f56c-487b-a98b-3a32aca52ea4}</Project>
       <Name>NewsPortal.Bootstrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsPortal.Common\NewsPortal.Common.csproj">
+      <Project>{75966d9f-ab2c-40b5-9332-5350b5222e05}</Project>
+      <Name>NewsPortal.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\NewsPortal.DependencyInjection\NewsPortal.DependencyInjection.csproj">
       <Project>{8aedad3f-cc80-4546-9737-3f6fe7cd0d2a}</Project>

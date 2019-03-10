@@ -66,12 +66,12 @@ namespace NewsPortal.Services.Base
             return mapper.Map<IEnumerable<TViewModel>>(entities);
         }
 
-        public async Task<PageViewModel<TViewModel>> GetPage<TSortProperty>(int pageNumber, int itemPerPage,
-            Expression<Func<TEntity, TSortProperty>> sortExpression, bool ascending = false)
+        protected async Task<PageViewModel<TViewModel>> GetPage<TSortProperty>(int pageNumber, int itemPerPage,
+            Expression<Func<TEntity, bool>> sortExpression, Expression<Func<TEntity, TSortProperty>> orderExpression, bool ascending = false)
         {
             var query = ascending
-                ? context.Set<TEntity>().OrderBy(sortExpression)
-                : context.Set<TEntity>().OrderByDescending(sortExpression);
+                ? context.Set<TEntity>().Where(sortExpression).OrderBy(orderExpression)
+                : context.Set<TEntity>().Where(sortExpression).OrderByDescending(orderExpression);
 
             var itemsToSkip = (pageNumber - 1) * itemPerPage;
             var pageItems = await query

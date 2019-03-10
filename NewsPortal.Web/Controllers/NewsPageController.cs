@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using NewsPortal.Bootstrapper;
+using NewsPortal.Common.Enums;
+using NewsPortal.Common.Filters;
 using NewsPortal.NewsFeedSources.Interfaces;
 using NewsPortal.ServicesFacade.Concrete;
 using System;
@@ -26,20 +28,19 @@ namespace NewsPortal.Web.Controllers
             this.newsService = newsService;
         }
 
-        public async Task<ActionResult> NewsPage(int? page, int? itemsPerPage)
+        [HttpGet]
+        public async Task<ActionResult> NewsPage(NewsFilter filter)
         {
-            ViewData["Page"] = page;
-            var pageNumber = page ?? 1;
-            var numberOfItemsPerPage = 
-                itemsPerPage ?? Convert.ToInt32(ConfigurationManager.AppSettings["DefaultNumberOfItemsPerPage"]);
-
-            var model = await newsService.GetPage(
-                pageNumber, numberOfItemsPerPage, news => news.PubDate);
-
-            ViewBag.PageNumber = pageNumber;
-            ViewBag.NumberOfItemsPerPage = numberOfItemsPerPage;
-
+            var model = await newsService.GetFilteredNews(filter);
+            FillNewsPageViewBag(filter);
             return View(model);
+        }
+
+        private void FillNewsPageViewBag(NewsFilter filter)
+        {
+            ViewBag.PageNumber = filter.Page.Value;
+            ViewBag.NumberOfItemsPerPage = filter.ItemsPerPage.Value;
+            ViewBag.NewsSource = filter.Source?.ToString();
         }
     }
 }

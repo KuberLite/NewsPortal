@@ -126,3 +126,7 @@ E:\RSS\NewsPortal.Web\bin\ru\System.Web.Http.WebHost.resources.dll
 E:\RSS\NewsPortal.Web\bin\RSS.exe
 E:\RSS\NewsPortal.Web\bin\RSS.pdb
 E:\RSS\NewsPortal.Web\bin\RSS.exe.config
+E:\RSS\NewsPortal.Web\bin\PagedList.dll
+E:\RSS\NewsPortal.Web\bin\PagedList.xml
+E:\RSS\NewsPortal.Web\bin\NewsPortal.Common.dll
+E:\RSS\NewsPortal.Web\bin\NewsPortal.Common.pdb

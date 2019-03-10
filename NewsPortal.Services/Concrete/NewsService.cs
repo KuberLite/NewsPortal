@@ -1,12 +1,17 @@
 ﻿using AutoMapper;
+using NewsPortal.Common.Extensions;
+using NewsPortal.Common.Filters;
 using NewsPortal.Domain.Context;
 using NewsPortal.Domain.Entities;
 using NewsPortal.Services.Base;
 using NewsPortal.ServicesFacade.Concrete;
 using NewsPortal.ViewModel.Concrete;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace NewsPortal.Services.Concrete
@@ -33,17 +38,31 @@ namespace NewsPortal.Services.Concrete
 
             return newsToAdd.Count;
         }
-
-        public IEnumerable<News> AddNewsToTable()
-        {
-            return context.Set<News>().ToList();
-        }
         
-        public IEnumerable<News> SortByLink(string fetchedUri)
+        public async Task<PageViewModel<NewsViewModel>> GetFilteredNews(NewsFilter filter)
         {
-            var newsToAdd = context.News.Where(x => x.Link.Contains(fetchedUri))
-                .ToList();
-            return newsToAdd;
+            filter.Page = filter.Page ?? 1;
+            filter.ItemsPerPage =
+                filter.ItemsPerPage ?? Convert.ToInt32(ConfigurationManager.AppSettings["DefaultNumberOfItemsPerPage"]);
+
+            var newsSourceString = filter.Source?.GetDescription();
+
+            Expression<Func<News, bool>> newsSortExpression;
+            if (string.IsNullOrEmpty(newsSourceString))
+            {
+                newsSortExpression = x => true;
+            }
+            else
+            {
+                newsSortExpression = x => x.Link.Contains(newsSourceString);
+            }
+
+            return await GetPage(
+                filter.Page.Value, 
+                filter.ItemsPerPage.Value,
+                newsSortExpression,
+                x => x.PubDate
+            );
         }
     }
 }

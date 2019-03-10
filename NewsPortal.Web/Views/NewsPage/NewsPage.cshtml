@@ -1,23 +1,26 @@
-﻿@using System.Web.Configuration;
-@model NewsPortal.ViewModel.Concrete.PageViewModel<NewsPortal.ViewModel.Concrete.NewsViewModel>
+﻿@using NewsPortal.Common;
+@using NewsPortal.Common.Enums;
 
+@model NewsPortal.ViewModel.Concrete.PageViewModel<NewsPortal.ViewModel.Concrete.NewsViewModel>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div>
     <h1>Новостная лента</h1>
     <div>
         <span>Источник ленты:</span>
-        <form method="get" action="NewsPage/SortedNews">
-            @Html.DropDownList("source", new SelectList(new string[] { @WebConfigurationManager.AppSettings["habr"], @WebConfigurationManager.AppSettings["interfax"] }), "Источник")
+        <form method="get">
+            @Html.DropDownList("source", new SelectList(BaseHelper.GetEnumFields<NewsSources>(), "Источник"))
+            <input type="submit" />
         </form>
     </div>
 
     <div>
         <p><input type="radio" checked>Сортировать по дате&#8195;&#8195;<input type="radio">Сортировать по источнику</p>
-        <div>
-            <input type="button" value="Просмотреть"/>
-        </div>
+        <form method="post">
+            <input type="button" class="btn-succes" method value="Просмотреть" onclick="location.href='@Url.Action("NewsPage","NewsPage")'" />
+        </form>
         <br />
         <div>
             <table class="table row col-md-12">
@@ -32,7 +35,7 @@
                 <tbody>
                     @foreach (var item in Model.Items)
                     {
-                        <tr>
+                        <tr class="news-column">
                             <td class="col-md-2">@Html.Raw(item.Link)</td>
                             <td class="col-md-2">@Html.Raw(item.Title)</td>
                             <td class="col-md-6">@Html.Raw(item.Description)</td>
@@ -41,22 +44,29 @@
                     }
                 </tbody>
             </table>
+            @for (var pageNumber = 1; pageNumber <= GetTotalNumberOfPages(); pageNumber++)
+            {
+                <div class="btn btn-link">
+                    @Html.ActionLink(pageNumber.ToString(), "NewsPage", new { Page = pageNumber, Source = ViewBag.NewsSource })
+                </div>
+            }
+
             <span>@GetPaginationInfo()</span>
-            <p>
-                @Html.ActionLink("<", "NewsPage", new { Page = ViewBag.PageNumber - 1 })
-                @Html.ActionLink(">", "NewsPage", new { Page = ViewBag.PageNumber + 1 })
-            </p>
         </div>
     </div>
 </div>
 
-@functions 
+@functions
 {
     string GetPaginationInfo()
     {
         var page = (int)ViewBag.PageNumber;
-        var itemsPerPage = (int)ViewBag.NumberOfItemsPerPage;
+        return $"Page {page} of total {GetTotalNumberOfPages()} pages";
+    }
 
-        return $"Page {page} of total {(int)(Model.Count / itemsPerPage)} pages";
+    int GetTotalNumberOfPages()
+    {
+        var itemsPerPage = (int)ViewBag.NumberOfItemsPerPage;
+        return (int)(Model.Count / itemsPerPage);
     }
 }

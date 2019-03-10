@@ -52,3 +52,5 @@ E:\RSS\NewsPortal.DependencyInjection\obj\Debug\NewsPortal.DependencyInjection.c
 E:\RSS\NewsPortal.DependencyInjection\obj\Debug\NewsPortal.DependencyInjection.dll
 E:\RSS\NewsPortal.DependencyInjection\obj\Debug\NewsPortal.DependencyInjection.pdb
 E:\RSS\NewsPortal.DependencyInjection\bin\Debug\NewsPortal.ServicesFacade.dll.config
+E:\RSS\NewsPortal.DependencyInjection\bin\Debug\NewsPortal.Common.dll
+E:\RSS\NewsPortal.DependencyInjection\bin\Debug\NewsPortal.Common.pdb

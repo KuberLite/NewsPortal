@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPortal.Bootstrapper", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPortal.DependencyInjection", "NewsPortal.DependencyInjection\NewsPortal.DependencyInjection.csproj", "{8AEDAD3F-CC80-4546-9737-3F6FE7CD0D2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPortal.Common", "NewsPortal.Common\NewsPortal.Common.csproj", "{75966D9F-AB2C-40B5-9332-5350B5222E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,10 @@ Global
 		{8AEDAD3F-CC80-4546-9737-3F6FE7CD0D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AEDAD3F-CC80-4546-9737-3F6FE7CD0D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AEDAD3F-CC80-4546-9737-3F6FE7CD0D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75966D9F-AB2C-40B5-9332-5350B5222E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75966D9F-AB2C-40B5-9332-5350B5222E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75966D9F-AB2C-40B5-9332-5350B5222E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75966D9F-AB2C-40B5-9332-5350B5222E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{0F8A1409-FBC4-4C40-A4BC-540669C314F5} = {D878F506-9E35-486D-AB99-E711A8DC4953}
 		{EDF3986A-F56C-487B-A98B-3A32ACA52EA4} = {901ABC4F-1262-402D-83D1-F24500DC40E0}
 		{8AEDAD3F-CC80-4546-9737-3F6FE7CD0D2A} = {901ABC4F-1262-402D-83D1-F24500DC40E0}
+		{75966D9F-AB2C-40B5-9332-5350B5222E05} = {901ABC4F-1262-402D-83D1-F24500DC40E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3D179A4-F8DB-4851-9230-3B50C2D5E94E}

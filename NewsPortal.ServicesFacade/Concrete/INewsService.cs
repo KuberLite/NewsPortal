@@ -1,4 +1,5 @@
-﻿using NewsPortal.Domain.Entities;
+﻿using NewsPortal.Common.Filters;
+using NewsPortal.Domain.Entities;
 using NewsPortal.ServicesFacade.Base;
 using NewsPortal.ViewModel.Concrete;
 using System.Collections.Generic;
@@ -10,8 +11,6 @@ namespace NewsPortal.ServicesFacade.Concrete
     {
         Task<int> AddNewsFeed(IEnumerable<NewsViewModel> news);
 
-        IEnumerable<News> AddNewsToTable();
-
-        IEnumerable<News> SortByLink(string fetchedUri);
+        Task<PageViewModel<NewsViewModel>> GetFilteredNews(NewsFilter filter);
     }
 }

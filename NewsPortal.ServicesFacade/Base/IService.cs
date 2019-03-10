@@ -24,7 +24,5 @@ namespace NewsPortal.ServicesFacade.Base
         Task RemoveRange(IEnumerable<TViewModel> models);
 
         Task<IEnumerable<TViewModel>> GetAll();
-
-        Task<PageViewModel<TViewModel>> GetPage<TSortProperty>(int pageNumber, int itemPerPage, Expression<Func<TEntity, TSortProperty>> sortExpression, bool ascending = false);
     }
 }

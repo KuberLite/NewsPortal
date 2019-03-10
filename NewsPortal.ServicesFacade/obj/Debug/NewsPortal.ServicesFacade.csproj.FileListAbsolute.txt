@@ -22,3 +22,5 @@ E:\RSS\NewsPortal.ServicesFacade\obj\Debug\NewsPortal.ServicesFacade.pdb
 E:\RSS\NewsPortal.ServicesFacade\bin\Debug\NewsPortal.ServicesFacade.dll.config
 E:\RSS\NewsPortal.ServicesFacade\bin\Debug\EntityFramework.SqlServer.dll
 E:\RSS\NewsPortal.ServicesFacade\bin\Debug\EntityFramework.SqlServer.xml
+E:\RSS\NewsPortal.ServicesFacade\bin\Debug\NewsPortal.Common.dll
+E:\RSS\NewsPortal.ServicesFacade\bin\Debug\NewsPortal.Common.pdb
