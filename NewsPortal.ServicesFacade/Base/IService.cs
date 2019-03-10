@@ -25,8 +25,6 @@ namespace NewsPortal.ServicesFacade.Base
 
         Task<IEnumerable<TViewModel>> GetAll();
 
-        Task<PageViewModel<TViewModel>> GetPage(int pageNumber, int itemPerPage);
-
-        //TEntity AddIfNotExists(this DbSet<TEntity> dbSet, TEntity entity, Expression<Func<TEntity, bool>> predicate = null);
+        Task<PageViewModel<TViewModel>> GetPage<TSortProperty>(int pageNumber, int itemPerPage, Expression<Func<TEntity, TSortProperty>> sortExpression, bool ascending = false);
     }
 }

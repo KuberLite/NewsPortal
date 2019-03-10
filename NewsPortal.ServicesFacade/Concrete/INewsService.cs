@@ -9,5 +9,9 @@ namespace NewsPortal.ServicesFacade.Concrete
     public interface INewsService : IService<News, NewsViewModel>
     {
         Task<int> AddNewsFeed(IEnumerable<NewsViewModel> news);
+
+        IEnumerable<News> AddNewsToTable();
+
+        IEnumerable<News> SortByLink(string fetchedUri);
     }
 }

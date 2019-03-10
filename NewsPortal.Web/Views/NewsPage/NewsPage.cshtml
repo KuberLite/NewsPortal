@@ -1,0 +1,62 @@
+﻿@using System.Web.Configuration;
+@model NewsPortal.ViewModel.Concrete.PageViewModel<NewsPortal.ViewModel.Concrete.NewsViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h1>Новостная лента</h1>
+    <div>
+        <span>Источник ленты:</span>
+        <form method="get" action="NewsPage/SortedNews">
+            @Html.DropDownList("source", new SelectList(new string[] { @WebConfigurationManager.AppSettings["habr"], @WebConfigurationManager.AppSettings["interfax"] }), "Источник")
+        </form>
+    </div>
+
+    <div>
+        <p><input type="radio" checked>Сортировать по дате&#8195;&#8195;<input type="radio">Сортировать по источнику</p>
+        <div>
+            <input type="button" value="Просмотреть"/>
+        </div>
+        <br />
+        <div>
+            <table class="table row col-md-12">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Источник</th>
+                        <th scope="col">Название новости</th>
+                        <th scope="col">Описание новости</th>
+                        <th scope="col">Дата публикации</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td class="col-md-2">@Html.Raw(item.Link)</td>
+                            <td class="col-md-2">@Html.Raw(item.Title)</td>
+                            <td class="col-md-6">@Html.Raw(item.Description)</td>
+                            <td class="col-md-2">@Html.Raw(item.PubDate)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <span>@GetPaginationInfo()</span>
+            <p>
+                @Html.ActionLink("<", "NewsPage", new { Page = ViewBag.PageNumber - 1 })
+                @Html.ActionLink(">", "NewsPage", new { Page = ViewBag.PageNumber + 1 })
+            </p>
+        </div>
+    </div>
+</div>
+
+@functions 
+{
+    string GetPaginationInfo()
+    {
+        var page = (int)ViewBag.PageNumber;
+        var itemsPerPage = (int)ViewBag.NumberOfItemsPerPage;
+
+        return $"Page {page} of total {(int)(Model.Count / itemsPerPage)} pages";
+    }
+}

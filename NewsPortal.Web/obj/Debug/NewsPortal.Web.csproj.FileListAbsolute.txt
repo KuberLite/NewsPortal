@@ -114,3 +114,15 @@ E:\RSS\NewsPortal.Web\obj\Debug\NewsPortal.Web.csproj.CopyComplete
 E:\RSS\NewsPortal.Web\obj\Debug\NewsPortal.Web.dll
 E:\RSS\NewsPortal.Web\obj\Debug\NewsPortal.Web.pdb
 E:\RSS\NewsPortal.Web\bin\NewsPortal.ServicesFacade.dll.config
+E:\RSS\NewsPortal.Web\bin\System.Net.Http.Formatting.dll
+E:\RSS\NewsPortal.Web\bin\System.Web.Http.dll
+E:\RSS\NewsPortal.Web\bin\System.Web.Http.WebHost.dll
+E:\RSS\NewsPortal.Web\bin\System.Net.Http.Formatting.xml
+E:\RSS\NewsPortal.Web\bin\System.Web.Http.xml
+E:\RSS\NewsPortal.Web\bin\System.Web.Http.WebHost.xml
+E:\RSS\NewsPortal.Web\bin\ru\System.Net.Http.Formatting.resources.dll
+E:\RSS\NewsPortal.Web\bin\ru\System.Web.Http.resources.dll
+E:\RSS\NewsPortal.Web\bin\ru\System.Web.Http.WebHost.resources.dll
+E:\RSS\NewsPortal.Web\bin\RSS.exe
+E:\RSS\NewsPortal.Web\bin\RSS.pdb
+E:\RSS\NewsPortal.Web\bin\RSS.exe.config

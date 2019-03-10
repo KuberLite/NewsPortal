@@ -55,9 +55,15 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -67,6 +73,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -133,6 +145,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,6 +184,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\NewsPage\NewsPage.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -195,9 +209,37 @@
       <Project>{edf3986a-f56c-487b-a98b-3a32aca52ea4}</Project>
       <Name>NewsPortal.Bootstrapper</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NewsPortal.DependencyInjection\NewsPortal.DependencyInjection.csproj">
+      <Project>{8aedad3f-cc80-4546-9737-3f6fe7cd0d2a}</Project>
+      <Name>NewsPortal.DependencyInjection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NewsPortal.Domain\NewsPortal.Domain.csproj">
       <Project>{a7c74459-e363-4cfe-a2ad-299b066db375}</Project>
       <Name>NewsPortal.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsPortal.FetcherFacade\NewsPortal.FetcherFacade.csproj">
+      <Project>{f9c96da5-8717-4b8f-9a5f-3e601ba8e540}</Project>
+      <Name>NewsPortal.FetcherFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsPortal.NewsFeedSources\NewsPortal.NewsFeedSources.csproj">
+      <Project>{0F8A1409-FBC4-4C40-A4BC-540669C314F5}</Project>
+      <Name>NewsPortal.NewsFeedSources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsPortal.ServicesFacade\NewsPortal.ServicesFacade.csproj">
+      <Project>{3148F559-A153-4169-913C-2FF7A893EDDC}</Project>
+      <Name>NewsPortal.ServicesFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsPortal.Services\NewsPortal.Services.csproj">
+      <Project>{309667e4-ed84-4c75-8872-f2052adc616f}</Project>
+      <Name>NewsPortal.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsPortal.ViewModel\NewsPortal.ViewModel.csproj">
+      <Project>{431CE1CF-241F-4AE0-B729-DD2FCFE26A98}</Project>
+      <Name>NewsPortal.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RSS\NewsPortal.ConsoleSeed.csproj">
+      <Project>{fe65b3a8-d088-4236-8e1c-22d1c5760ee6}</Project>
+      <Name>NewsPortal.ConsoleSeed</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

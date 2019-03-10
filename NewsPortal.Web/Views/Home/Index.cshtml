@@ -1,33 +1,7 @@
-﻿<div>
-    <h1>Новостная лента</h1>
-    <div>
-        <span>Источник ленты:</span>
-        <select>
-            <option></option>
-        </select>
-    </div>
+﻿@model IEnumerable<NewsPortal.Domain.Entities.News>
 
-    <div>
-        <p><input type="radio" checked>Сортировать по дате&#8195;&#8195;<input type="radio">Сортировать по источнику</p>
-        <div>
-            <input type="button" value="Просмотреть"/>
-        </div>
-        <br />
-        <div>
-            <table border="1">
-                <tr>
-                    <th>Источник</th>
-                    <th>Название новости</th>
-                    <th>Описание новости</th>
-                    <th>Дата публикации</th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
+@{
+    Layout = "~/Views/News/NewsPage.cshtml";
+}
+
+

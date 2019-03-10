@@ -4,12 +4,9 @@ using NewsPortal.Domain.Entities;
 using NewsPortal.Services.Base;
 using NewsPortal.ServicesFacade.Concrete;
 using NewsPortal.ViewModel.Concrete;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace NewsPortal.Services.Concrete
@@ -27,7 +24,7 @@ namespace NewsPortal.Services.Concrete
             await context.News.LoadAsync();
 
             var newsToAdd = news
-                .Where(x => context.News.Any(y => y.Title == x.Title && y.Guid == y.Guid))
+                .Where(x => !context.News.Any(y => y.Title == x.Title && y.Guid == x.Guid))
                 .ToList();
 
             context.News.AddRange(mapper.Map<IEnumerable<News>>(newsToAdd));
@@ -35,6 +32,18 @@ namespace NewsPortal.Services.Concrete
             await context.SaveChangesAsync();
 
             return newsToAdd.Count;
+        }
+
+        public IEnumerable<News> AddNewsToTable()
+        {
+            return context.Set<News>().ToList();
+        }
+        
+        public IEnumerable<News> SortByLink(string fetchedUri)
+        {
+            var newsToAdd = context.News.Where(x => x.Link.Contains(fetchedUri))
+                .ToList();
+            return newsToAdd;
         }
     }
 }

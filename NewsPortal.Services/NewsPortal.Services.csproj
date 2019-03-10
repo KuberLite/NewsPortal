@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="Base\Service.cs" />
     <Compile Include="Concrete\NewsService.cs" />
-    <Compile Include="Concrete\TViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
