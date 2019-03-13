@@ -10,9 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{D878F506-9E35-486D-AB99-E711A8DC4953}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{A88490E1-28B2-44A2-A563-60B88B30F819}"
-	ProjectSection(SolutionItems) = preProject
-		RSS\Program.cs = RSS\Program.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPortal.Web", "NewsPortal.Web\NewsPortal.Web.csproj", "{D4A79F0F-FAE6-4D30-8780-B6E521D7551D}"
 EndProject

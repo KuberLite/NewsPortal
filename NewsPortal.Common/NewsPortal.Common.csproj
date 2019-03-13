@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseHelper.cs" />
+    <Compile Include="Enums\NewsSorting.cs" />
     <Compile Include="Enums\NewsSources.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Filters\NewsFilter.cs" />

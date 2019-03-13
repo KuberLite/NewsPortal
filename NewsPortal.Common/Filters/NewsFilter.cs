@@ -9,5 +9,7 @@ namespace NewsPortal.Common.Filters
         public int? ItemsPerPage { get; set; }
 
         public NewsSources? Source { get; set; }
+
+        public NewsSorting? Sorting { get; set; }
     }
 }

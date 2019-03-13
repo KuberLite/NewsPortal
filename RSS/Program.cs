@@ -1,16 +1,11 @@
 ﻿using AutoMapper;
 using NewsPortal.Bootstrapper;
-using NewsPortal.Domain.Context;
-using NewsPortal.Domain.Entities;
 using NewsPortal.FetcherFacade.Models;
-using NewsPortal.NewsFeedSources;
 using NewsPortal.NewsFeedSources.Interfaces;
 using NewsPortal.ServicesFacade.Concrete;
 using NewsPortal.ViewModel.Concrete;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 

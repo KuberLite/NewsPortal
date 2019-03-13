@@ -41,6 +41,7 @@ namespace NewsPortal.Web.Controllers
             ViewBag.PageNumber = filter.Page.Value;
             ViewBag.NumberOfItemsPerPage = filter.ItemsPerPage.Value;
             ViewBag.NewsSource = filter.Source?.ToString();
+            ViewBag.NewsDate = filter.Sorting?.ToString();
         }
     }
 }

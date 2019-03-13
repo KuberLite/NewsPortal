@@ -46,23 +46,49 @@ namespace NewsPortal.Services.Concrete
                 filter.ItemsPerPage ?? Convert.ToInt32(ConfigurationManager.AppSettings["DefaultNumberOfItemsPerPage"]);
 
             var newsSourceString = filter.Source?.GetDescription();
+            var newsSortString = filter.Sorting?.ToString();
 
             Expression<Func<News, bool>> newsSortExpression;
+            Expression<Func<News, DateTime>> newsSortByDateExpression;
+            Expression<Func<News, string>> newsSortBySourceExpression;
+
             if (string.IsNullOrEmpty(newsSourceString))
             {
                 newsSortExpression = x => true;
             }
-            else
+            else 
             {
                 newsSortExpression = x => x.Link.Contains(newsSourceString);
             }
 
-            return await GetPage(
-                filter.Page.Value, 
-                filter.ItemsPerPage.Value,
-                newsSortExpression,
-                x => x.PubDate
-            );
+            if (newsSortString == "Date")
+            { 
+                return await GetPage(
+                    filter.Page.Value,
+                    filter.ItemsPerPage.Value,
+                    newsSortExpression,
+                    newsSortByDateExpression = x => x.PubDate
+                    );
+            }
+            else if(newsSortString == "Source")
+            {
+                return await GetPage(
+                    filter.Page.Value,
+                    filter.ItemsPerPage.Value,
+                    newsSortExpression,
+                    newsSortBySourceExpression = x => x.Link
+                    ); 
+            }
+            else
+            {
+                return await GetPage(
+                    filter.Page.Value,
+                    filter.ItemsPerPage.Value,
+                    newsSortExpression,
+                    x => x.Title
+                    );
+
+            }
         }
     }
 }

@@ -83,7 +83,7 @@ namespace NewsPortal.Services.Base
             {
                 Items = mapper.Map<IEnumerable<TViewModel>>(pageItems),
                 Count = await query.CountAsync()
-            };
+            };  
         }
     }
 }

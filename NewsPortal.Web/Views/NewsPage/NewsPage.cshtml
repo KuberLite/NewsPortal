@@ -2,6 +2,8 @@
 @using NewsPortal.Common.Enums;
 
 @model NewsPortal.ViewModel.Concrete.PageViewModel<NewsPortal.ViewModel.Concrete.NewsViewModel>
+
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -10,18 +12,20 @@
     <h1>Новостная лента</h1>
     <div>
         <span>Источник ленты:</span>
+        @{ var sortList = BaseHelper.GetEnumFields<NewsSorting>(); }
         <form method="get">
-            @Html.DropDownList("source", new SelectList(BaseHelper.GetEnumFields<NewsSources>(), "Источник"))
-            <input type="submit" />
+            @Html.DropDownList("source", new SelectList(BaseHelper.GetEnumFields<NewsSources>()))
+            <br />
+            @foreach (var radioText in sortList)
+            {
+                @Html.RadioButton("sorting", radioText.ToString()) @radioText.ToString()
+            }
+            <br />
+            <input type="submit" value="Просмотреть" />
         </form>
     </div>
 
     <div>
-        <p><input type="radio" checked>Сортировать по дате&#8195;&#8195;<input type="radio">Сортировать по источнику</p>
-        <form method="post">
-            <input type="button" class="btn-succes" method value="Просмотреть" onclick="location.href='@Url.Action("NewsPage","NewsPage")'" />
-        </form>
-        <br />
         <div>
             <table class="table row col-md-12">
                 <thead class="thead-dark">
@@ -47,7 +51,7 @@
             @for (var pageNumber = 1; pageNumber <= GetTotalNumberOfPages(); pageNumber++)
             {
                 <div class="btn btn-link">
-                    @Html.ActionLink(pageNumber.ToString(), "NewsPage", new { Page = pageNumber, Source = ViewBag.NewsSource })
+                    @Html.ActionLink(pageNumber.ToString(), "NewsPage", new { Page = pageNumber, Source = ViewBag.NewsSource, Sorting = ViewBag.NewsDate })
                 </div>
             }
 
@@ -61,7 +65,7 @@
     string GetPaginationInfo()
     {
         var page = (int)ViewBag.PageNumber;
-        return $"Page {page} of total {GetTotalNumberOfPages()} pages";
+        return $"Page { page } of total { GetTotalNumberOfPages() } pages";
     }
 
     int GetTotalNumberOfPages()
