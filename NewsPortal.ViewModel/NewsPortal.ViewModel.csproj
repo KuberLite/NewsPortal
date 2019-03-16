@@ -51,7 +51,6 @@
     <Compile Include="Base\IViewModel.cs" />
     <Compile Include="Concrete\NewsViewModel.cs" />
     <Compile Include="Concrete\PageViewModel.cs" />
-    <Compile Include="Concrete\SortViewModel.cs" />
     <Compile Include="MappingProfiles\NewsProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

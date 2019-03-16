@@ -1,11 +1,7 @@
 ﻿using AutoMapper;
-using NewsPortal.Bootstrapper;
-using NewsPortal.Common.Enums;
 using NewsPortal.Common.Filters;
 using NewsPortal.NewsFeedSources.Interfaces;
 using NewsPortal.ServicesFacade.Concrete;
-using System;
-using System.Configuration;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 

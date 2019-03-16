@@ -59,7 +59,6 @@ namespace NewsPortal.Services.Base
             context.Set<TEntity>().RemoveRange(entities);
             await context.SaveChangesAsync();
         }
-
         public async Task<IEnumerable<TViewModel>> GetAll()
         {
             var entities = await context.Set<TEntity>().ToListAsync();
